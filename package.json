@@ -1,0 +1,30 @@
+{
+  "name": "create-react-app-with-lerna",
+  "version": "1.0.0",
+  "description": "Sample application to verify if lerna works well with create-react-app projects in a monorepo.",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "lerna bootstrap --nohoist **",
+    "create-react-app": "cd packages && create-react-app",
+    "postcreate-react-app": "cd ..",
+    "create-react-native-app": "cd packages && create-react-native-app",
+    "postcreate-react-native-app": "cd ..",
+    "create-package": "lerna create",
+    "build-common": "cd packages/common && yarn build && cd ../..",
+    "build-web": "cd packages/web && yarn build && cd ../..",
+    "start-web": "cd packages/web && yarn start && cd ../..",
+    "clean": "lerna clean"
+  },
+  "repository": "git+https://github.com/murleeramasamy/create-react-app-with-lerna.git",
+  "author": "Murali Ramasamy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murleeramasamy/create-react-app-with-lerna/issues"
+  },
+  "homepage": "https://github.com/murleeramasamy/create-react-app-with-lerna#readme",
+  "devDependencies": {
+    "create-react-app": "^3.4.1",
+    "create-react-native-app": "^2.0.2",
+    "lerna": "^3.20.2"
+  }
+}

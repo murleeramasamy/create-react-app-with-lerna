@@ -1,0 +1,33 @@
+{
+  "name": "@mypackage/common",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Common package to be shared among other packages in the project",
+  "author": "Murali Ramasamy <muralii.kalam@gmail.com>",
+  "homepage": "https://github.com/murleeramasamy/create-react-app-with-lerna/tree/master/packages/common#readme",
+  "license": "MIT",
+  "main": "lib/common.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murleeramasamy/create-react-app-with-lerna.git"
+  },
+  "scripts": {
+    "build": "copyfiles lib/*.js dist"
+  },
+  "bugs": {
+    "url": "https://github.com/murleeramasamy/create-react-app-with-lerna/issues"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.2.0"
+  }
+}
