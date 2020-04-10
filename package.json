@@ -11,9 +11,10 @@
     "postcreate-react-native-app": "cd ..",
     "create-package": "lerna create",
     "build-common": "cd packages/common && yarn build && cd ../..",
+    "prebuild-web": "yarn build-common",
     "build-web": "cd packages/web && yarn build && cd ../..",
     "start-web": "cd packages/web && yarn start && cd ../..",
-    "clean": "lerna clean"
+    "clean": "lerna clean --yes && del-cli packages/common/dist && del-cli packages/web/build"
   },
   "repository": "git+https://github.com/murleeramasamy/create-react-app-with-lerna.git",
   "author": "Murali Ramasamy",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "create-react-app": "^3.4.1",
     "create-react-native-app": "^2.0.2",
+    "del-cli": "^3.0.0",
     "lerna": "^3.20.2"
   }
 }

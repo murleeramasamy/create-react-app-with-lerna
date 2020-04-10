@@ -1,11 +1,3 @@
 # `common`
 
-> TODO: description
-
-## Usage
-
-```
-const common = require('common');
-
-// TODO: DEMONSTRATE API
-```
+This package contains common business logic that is shared among other packages in this project.
